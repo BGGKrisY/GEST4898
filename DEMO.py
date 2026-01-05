@@ -179,7 +179,7 @@ void handleWebClient() {
 void loop() {
   uint16_t distance_mm = sensor.read();
   if (!sensor.timeoutOccurred() && distance_mm < 2000) {
-    currentDistance = distance_mm-40;
+    currentDistance = distance_mm+40;
     currentRiskLevel = calculateRiskLevel(currentDistance);
   }
   controlBuzzer();
